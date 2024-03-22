@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane prefHeight="17.0" prefWidth="900.0" styleClass="bottom-panel" stylesheets="@../Styles/BottomPanel.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER_LEFT" layoutX="-50.0" layoutY="-60.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="currentActionLabel" text="DRAWING VECTOR LINE..." />
+            <Line endY="14.0" />
+            <Label fx:id="tipTextLabel" text="TIP TEXT" />
+            <Line endY="14.0" layoutX="336.0" layoutY="11.0" />
+            <TextField fx:id="bottomTextField" opacity="0.26" />
+         </children>
+      </HBox>
+      <ProgressBar fx:id="progressBar" opacity="0.4" prefWidth="200.0" progress="0.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="688.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>

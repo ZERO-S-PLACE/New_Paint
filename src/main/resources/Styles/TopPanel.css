@@ -1,0 +1,123 @@
+.top-panel-menu{
+-fx-background-color:#274a55;
+-fx-spacing:5;
+-fx-border-radius:3;
+-fx-border-width:2;
+-fx-border-color:#101f23;
+-fx-padding: 2 10 2 10 ;
+
+}
+
+.top-panel-container{
+-fx-background-color:#101f23;
+-fx-spacing:3;
+-fx-padding: 1 1 1 1;
+}
+
+.top-panel-menu MenuButton{
+-fx-background-color:#274a55;
+ -fx-alignment:center;
+}
+
+
+.top-panel-menu MenuItem{
+-fx-background-color:#274a55;
+}
+
+.top-panel-menu MenuButton .label{
+-fx-text-fill:#a2b4c0;
+-fx-font-size:1.0em;
+}
+
+
+.top-panel-menu MenuItem .label{
+-fx-background-color:#274a55;
+-fx-text-fill:#a2b4c0;
+-fx-font-size:1.0em;
+}
+
+
+
+.top-panel-menu MenuButton:focused{
+-fx-background-color:#778792;
+}
+
+.top-panel-menu MenuItem:focused{
+-fx-background-color:#778792;
+}
+
+
+.top-panel-menu MenuItem:focused{
+-fx-background-color:#778792;
+}
+.top-panel-menu MenuButton:focused{
+-fx-background-color:#778792;
+}
+.top-panel-menu .arrow{
+-fx-background-color:#101f23;
+}
+
+
+
+
+.text-description{
+-fx-rotate:270;
+
+-fx-text-fill:#a2b4c0;
+-fx-font-size:1.0em;
+-fx-alignment:bottom_right;
+}
+
+.top-panel-menu TextField{
+-fx-pref-width:50;
+-fx-pref-height:15;
+-fx-background-color:#101f23;
+-fx-text-fill:#a2b4c0;
+-fx-font-size:1.0em;
+-fx-alignment:center_left;
+}
+
+.top-panel-menu Text{
+-fx-fill:#a2b4c0;
+-fx-font-size:1.0em;
+-fx-alignment:center_left;
+}
+
+
+.top-panel-menu Line{
+-fx-background-color:#101f23;
+-fx-spacing:3;
+-fx-padding: 1 1 1 1;
+-fx-width:1;
+}
+
+
+
+.split-pane > .split-pane-divider {
+    -fx-background-color: #101f23; /* Set your desired background color */
+    -fx-pref-width:1;
+}
+
+/* Track styling */
+.slider .track {
+    -fx-background-color: #101f23; /* Track background color */
+}
+
+/* Thumb styling */
+.slider .thumb {
+    -fx-background-color: #a2b4c0; /* Thumb color */
+    -fx-background-insets: 1; /* Remove default border around the thumb */
+
+}
+
+/* Tick styling */
+
+
+
+
+.color-picker{
+-fx-pref-width:30;
+-fx-pref-height:15;
+-fx-background-color:#274a55;
+
+}

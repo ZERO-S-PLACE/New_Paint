@@ -1,0 +1,16 @@
+/* Track styling */
+.slider .track {
+    -fx-background-color: #101f23; /* Track background color */
+}
+
+/* Thumb styling */
+.slider .thumb {
+    -fx-background-color: #a2b4c0; /* Thumb color */
+    -fx-background-insets: 1; /* Remove default border around the thumb */
+
+}
+
+/* Tick styling */
+.slider .tick-mark {
+    -fx-stroke: #a2b4c0; /* Tick color */
+}

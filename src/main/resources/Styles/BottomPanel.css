@@ -1,0 +1,53 @@
+.bottom-panel {
+    -fx-background-color: #274a55;
+    -fx-padding: 1 10 1 10;
+    -fx-border-radius:3;
+    -fx-border-width:2;
+    -fx-border-color:#274a55;
+}
+
+.bottom-panel HBox {
+    -fx-spacing: 15;
+}
+
+.bottom-panel Label {
+    -fx-background-color: #274a55;
+    -fx-text-fill: #a2b4c0;
+    -fx-font-family: "Calibri";
+    -fx-pref-height: 10;
+    -fx-font-size: 0.8em;
+}
+
+.bottom-panel TextField {
+    -fx-background-color: #101f23;
+    -fx-text-fill: #a2b4c0;
+    -fx-font-family: "Calibri";
+    -fx-pref-width: 200;
+    -fx-pref-height: 10;
+    -fx-font-size: 0.8em;
+}
+
+.bottom-panel Line {
+    -fx-stroke: #101f23;
+    -fx-stroke-width: 1.1;
+
+}
+
+.progress-bar {
+    -fx-accent:#101f23;
+}
+
+.progress-bar .bar {
+    -fx-padding: 1px;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-background-color:#a2b4c0;
+}
+
+.progress-bar > .track {
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-text-box-border: transparent;
+    -fx-control-inner-background: transparent;
+    -fx-background-color:#101f23;
+}

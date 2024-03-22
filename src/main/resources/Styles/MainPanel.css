@@ -1,0 +1,52 @@
+.background{
+-fx-background-color:#101f23;
+}
+
+
+.split-pane > .split-pane-divider {
+    -fx-background-color: #101f23; /* Set your desired background color */
+    -fx-padding: 2; /* Set padding as needed */
+
+}
+
+ .scroll-pane{
+     -fx-background-color:#101f23;
+
+}
+
+/* Customize the vertical scrollbar */
+.scroll-bar:vertical {
+    -fx-background-color: #1c353d; /* Background color */
+}
+
+.scroll-bar:vertical .increment-button {
+    -fx-background-color: #1c353d; /* Increment button color */
+}
+
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color:#1c353d; /* Decrement button color */
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #55616A; /* Thumb color */
+}
+
+/* Customize the horizontal scrollbar */
+.scroll-bar:horizontal {
+    -fx-background-color: #1c353d; /* Background color */
+}
+
+.scroll-bar:horizontal .increment-button {
+    -fx-background-color: #1c353d; /* Increment button color */
+}
+
+.scroll-bar:horizontal .decrement-button {
+    -fx-background-color: #1c353d; /* Decrement button color */
+}
+
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: #55616A; /* Thumb color */
+}
+.layers-menu .scroll-pane > .corner {
+    -fx-background-color: transparent;
+}

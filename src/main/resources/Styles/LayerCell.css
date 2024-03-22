@@ -1,0 +1,54 @@
+.layer-cell{
+-fx-background-radius:2;
+-fx-background-color:#1c353d;
+-fx-spacing:2;
+-fx-padding: 1 1 1 1 ;
+
+
+-fx-border-width:1
+
+}
+.layer-cell HBox{
+-fx-spacing:5;
+}
+
+
+.layer-cell Button{
+-fx-background-color:#1c353d;
+-fx-pref-width:15;
+-fx-pref-height:15;
+}
+.layer-cell Button:hover{
+-fx-cursor:hand;
+}
+.layer-cell Label:hover{
+-fx-cursor:hand;
+}
+.layer-cell Button FontAwesomeIconView{
+-fx-fill:#a2b4c0;
+}
+.layer-cell FontAwesomeIconView{
+-fx-fill:#a2b4c0;
+-fx-border-width:3;
+}
+
+.layer-cell Button:focused FontAwesomeIconView{
+-fx-fill:#dce8ef;
+}
+.layer-cell Label{
+-fx-pref-width:150;
+-fx-pref-height:15;
+-fx-background-color:#1c353d;
+-fx-text-fill:#dce8ef;
+-fx-font-size:1.0em;
+-fx-alignment:center_left;
+}
+.layer-cell TextField{
+-fx-pref-width:150;
+-fx-pref-height:15;
+-fx-background-color:#274a55;
+-fx-text-fill:#dce8ef;
+-fx-font-size:1.0em;
+-fx-alignment:center_left;
+}
+

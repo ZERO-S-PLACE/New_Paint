@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="77.0" styleClass="top-panel" stylesheets="@../Styles/TopPanel.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <HBox layoutX="7.0" layoutY="-64.0" styleClass="top-panel-menu" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <MenuButton mnemonicParsing="false" text="File">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As" />
+            <MenuItem mnemonicParsing="false" text="Open" />
+            <MenuItem mnemonicParsing="false" text="Import" />
+         </items>
+      </MenuButton>
+      <MenuButton layoutX="130.0" layoutY="10.0" mnemonicParsing="false" text="Picture">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Picture size" />
+            <MenuItem mnemonicParsing="false" text="Colors" />
+         </items>
+      </MenuButton>
+      <MenuButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Edition">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Add raster shape" />
+            <MenuItem mnemonicParsing="false" text="Add vector shape" />
+            <MenuItem mnemonicParsing="false" text="Erase" />
+         </items>
+      </MenuButton>
+      <MenuButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Layers">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Add directory" />
+            <MenuItem mnemonicParsing="false" text="Add layer" />
+            <MenuItem mnemonicParsing="false" text="Remove layer" />
+            <MenuItem mnemonicParsing="false" text="Rasterize layer" />
+            <MenuItem mnemonicParsing="false" text="Combine layers" />
+         </items>
+      </MenuButton>
+      <MenuButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Selection">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Magic selection" />
+            <MenuItem mnemonicParsing="false" text="Magic selection options" />
+            <MenuItem mnemonicParsing="false" text="Rectangle selection" />
+            <MenuItem mnemonicParsing="false" text="Polyline Selection" />
+         </items>
+      </MenuButton>
+      <MenuButton layoutX="10.0" layoutY="10.0" maxHeight="10.0" mnemonicParsing="false" text="Help">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Manual" />
+            <MenuItem mnemonicParsing="false" text="Contact developers" />
+         </items>
+      </MenuButton>
+   </HBox>
+   <SplitPane fx:id="pickersContainer" cacheShape="false" dividerPositions="0.35" styleClass="top-panel-container" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="33.0">
+      <items>
+         <AnchorPane styleClass="top-panel-menu">
+            <children>
+               <HBox fx:id="linePropertyPickerContainer" alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="420.0" scaleShape="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <children>
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-description" text="Line " />
+                     <Line endX="-99.79290008544922" endY="25.692893981933594" startX="-100.0" />
+                     <ColorPicker fx:id="lineColorPicker" styleClass="styled-color-picker" stylesheets="@../Styles/Controls/ColorPicker.css">
+                        <value>
+                           <Color />
+                        </value>
+                     </ColorPicker>
+                     <Line endX="-99.79290008544922" endY="25.692893981933594" startX="-100.0" />
+                     <VBox prefWidth="100.0">
+                        <children>
+                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Line Width" />
+                           <Slider fx:id="lineWeightSlider" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" scaleShape="false" />
+                        </children>
+                     </VBox>
+                     <TextField fx:id="lineWeightTextField" text="10" />
+                     <Line endX="-99.79290008544922" endY="25.692893981933594" startX="-100.0" />
+                     <VBox prefHeight="200.0" prefWidth="100.0">
+                        <children>
+                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Line Transparency" />
+                           <Slider fx:id="lineTransparencySlider" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" scaleShape="false" />
+                        </children>
+                     </VBox>
+                     <TextField fx:id="lineTransparencyTextField" text="\%" />
+                  </children>
+               </HBox>
+            </children>
+         </AnchorPane>
+         <AnchorPane minWidth="200.0" styleClass="top-panel-menu">
+            <children>
+               <HBox fx:id="fillPropertyPickerContainer" alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="535.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <children>
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-description" text="Fill" />
+                     <Line endX="-99.79290008544922" endY="25.692893981933594" startX="-100.0" />
+                     <ColorPicker fx:id="fillColorPicker" styleClass="color-picker">
+                        <value>
+                           <Color />
+                        </value>
+                     </ColorPicker>
+                     <Line endX="-99.79290008544922" endY="25.692893981933594" startX="-100.0" />
+                     <VBox prefHeight="200.0" prefWidth="100.0">
+                        <children>
+                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fill Transparency" />
+                           <Slider fx:id="fillTransparencySlider" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" scaleShape="false" />
+                        </children>
+                     </VBox>
+                     <TextField fx:id="fillTransparencyTextField" text="\%" />
+                  </children>
+               </HBox>
+            </children>
+         </AnchorPane>
+      </items>
+   </SplitPane>
+</AnchorPane>

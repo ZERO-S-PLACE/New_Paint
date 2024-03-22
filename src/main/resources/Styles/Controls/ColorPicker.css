@@ -1,0 +1,24 @@
+.styled-color-picker .color-picker{
+-fx-pref-width:30;
+-fx-pref-height:15;
+-fx-background-color:#274a55;
+
+}
+.styled-color-picker .arrow{
+-fx-background-color:#101f23;
+}
+
+
+ .styled-color-picker .color-picker-popup {
+    -fx-background-color:#274a55; /* Background color of the color picker popup */
+    -fx-border-color: #101f23; /* Border color of the color picker popup */
+}
+
+.styled-color-picker .color-picker-popup .color-rect {
+    -fx-background-color:#274a55; /* Background color of the color rectangle in the popup */
+}
+
+.styled-color-picker .color-picker-popup .color-label {
+    -fx-text-fill: #a2b4c0;
+
+}
