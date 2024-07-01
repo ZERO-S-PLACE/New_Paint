@@ -4,8 +4,8 @@
 
 
 .split-pane > .split-pane-divider {
-    -fx-background-color: #101f23; /* Set your desired background color */
-    -fx-padding: 2; /* Set padding as needed */
+    -fx-background-color: #101f23;
+    -fx-padding: 2;
 
 }
 
@@ -16,7 +16,7 @@
 
 /* Customize the vertical scrollbar */
 .scroll-bar:vertical {
-    -fx-background-color: #1c353d; /* Background color */
+    -fx-background-color: #1c353d;
 }
 
 .scroll-bar:vertical .increment-button {
@@ -48,5 +48,5 @@
     -fx-background-color: #55616A; /* Thumb color */
 }
 .layers-menu .scroll-pane > .corner {
-    -fx-background-color: transparent;
+    -fx-background-color: #55616A;
 }

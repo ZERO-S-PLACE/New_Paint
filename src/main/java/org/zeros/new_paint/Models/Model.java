@@ -1,19 +1,14 @@
 package org.zeros.new_paint.Models;
 
-import javafx.collections.FXCollections;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
 import org.zeros.new_paint.Controllers.*;
 import org.zeros.new_paint.Views.ViewFactory;
-
-import javax.crypto.spec.OAEPParameterSpec;
 
 public class Model {
 
     private final ViewFactory viewFactory;
     private static Model model;
     ImageEditionPanelController imageEditionPanelController;
-    LeftPanelController leftPanelController;
+    ActionChoicePanelController leftPanelController;
     TopPanelController topPanelController;
     BottomPanelController bottomPanelController;
 
@@ -39,9 +34,9 @@ public class Model {
         }
         return bottomPanelController;
     }
-    public LeftPanelController getLeftPanelController() {
+    public ActionChoicePanelController getLeftPanelController() {
         if(this.leftPanelController==null){
-            this.leftPanelController = new LeftPanelController();
+            this.leftPanelController = new ActionChoicePanelController();
         }
         return leftPanelController;
     }

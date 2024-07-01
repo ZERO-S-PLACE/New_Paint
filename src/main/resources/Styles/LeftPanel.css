@@ -20,8 +20,45 @@
     -fx-pref-width:35;
     -fx-pref-height:25;
      -fx-font-size:1.3em;
-}
+    -fx-stroke-width: 0px;
 
+}
+.moving-object-button{
+    -fx-background-image: url("../Icons/CreatorIcons/IconBallMoving.png");
+    -fx-background-size: 60%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.obstacle-button{
+    -fx-background-image: url("../Icons/CreatorIcons/IconObstacle.png");
+    -fx-background-size: 60%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.target-area-button{
+    -fx-background-image: url("../Icons/CreatorIcons/IconTargetArea.png");
+    -fx-background-size: 60%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.moving-object-to-add-button{
+    -fx-background-image: url("../Icons/CreatorIcons/IconBallMovingToAdd.png");
+    -fx-background-size: 60%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.obstacle-to-add-button{
+    -fx-background-image: url("../Icons/CreatorIcons/IconObstacleToAdd.png");
+    -fx-background-size: 60%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.input-area-button{
+    -fx-background-image: url("../Icons/CreatorIcons/IconInputArea.png");
+    -fx-background-size: 60%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
 
 
 .left-panel-menu Button:focused{
@@ -34,13 +71,9 @@
 }
 
 .left-panel-menu Line {
-
-
        -fx-stroke: #101f23;
        -fx-stroke-width: 1.1;
        -fx-padding: 1 1 1 1;
-
-
 }
 
 .left-panel-icon-lines{
@@ -64,10 +97,4 @@
     -fx-stroke-dash-array: 1 2;
 }
 
-.left-panel-menu .color-picker{
--fx-pref-width:30;
--fx-pref-height:15;
--fx-background-color:#274a55;
- -fx-alignment:center;
-}
 

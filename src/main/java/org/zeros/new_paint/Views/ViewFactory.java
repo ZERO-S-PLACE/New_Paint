@@ -34,7 +34,7 @@ public class ViewFactory {
     public AnchorPane getViewOfLeftPanel() {
         if (leftPanel == null) {
             try {
-                FXMLLoader loader=new FXMLLoader(getClass().getResource("/FXML/LeftPanel.fxml"));
+                FXMLLoader loader=new FXMLLoader(getClass().getResource("/FXML/ActionChoicePanel.fxml"));
                 loader.setController(Model.getInstance().getLeftPanelController());
                 leftPanel =loader.load();
             } catch (Exception e) {
