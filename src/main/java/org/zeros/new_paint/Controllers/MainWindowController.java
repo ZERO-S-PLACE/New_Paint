@@ -30,9 +30,6 @@ public class MainWindowController implements Initializable {
         AnchorPane.setBottomAnchor(Model.getInstance().getViewFactory().getViewOfLeftPanel(),0.0);
         AnchorPane.setTopAnchor(Model.getInstance().getViewFactory().getViewOfLeftPanel(), 0.0);
 
-        rightContainer.getItems().add(Model.getInstance().getViewFactory().getViewOfRightPanel());
-        AnchorPane.setBottomAnchor(Model.getInstance().getViewFactory().getViewOfRightPanel(),0.0);
-        AnchorPane.setTopAnchor(Model.getInstance().getViewFactory().getViewOfRightPanel(), 0.0);
 
         bottomPane.getChildren().add(Model.getInstance().getViewFactory().getViewOfBottomPanel());
         AnchorPane.setRightAnchor(Model.getInstance().getViewFactory().getViewOfBottomPanel(),0.0);
@@ -40,10 +37,6 @@ public class MainWindowController implements Initializable {
 
         mainImageContainer.fitToHeightProperty().set(true);
         mainImageContainer.fitToWidthProperty().set(true);
-
-        
-
-
 
 
     }

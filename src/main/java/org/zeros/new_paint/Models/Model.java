@@ -13,7 +13,6 @@ public class Model {
     private final ViewFactory viewFactory;
     private static Model model;
     ImageEditionPanelController imageEditionPanelController;
-    RightPanelController rightPanelController;
     LeftPanelController leftPanelController;
     TopPanelController topPanelController;
     BottomPanelController bottomPanelController;
@@ -25,15 +24,6 @@ public class Model {
             this.imageEditionPanelController = new ImageEditionPanelController();
         }
         return imageEditionPanelController;
-    }
-
-
-
-    public RightPanelController getRightPanelController() {
-        if(this.rightPanelController==null){
-            this.rightPanelController = new RightPanelController();
-        }
-        return rightPanelController;
     }
 
 

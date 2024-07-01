@@ -6,16 +6,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.paint.Color;
-import org.zeros.new_paint.ImageCreation.SettingsValues;
-import org.zeros.new_paint.ImageCreation.RasterShapes.RasterLineFactory;
-import org.zeros.new_paint.ImageCreation.VectorShapes.*;
-import org.zeros.new_paint.ImageCreation.VectorShapes.VectorPolyLineFactory;
-import org.zeros.new_paint.ImageCreation.VectorShapes.VectorShapeFactory;
-import org.zeros.new_paint.Models.Layers.LayerType;
-import org.zeros.new_paint.Models.LineType;
+
 import org.zeros.new_paint.Models.Model;
-import org.zeros.new_paint.Models.ShapeType;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -44,41 +36,6 @@ public class LeftPanelController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        drawStraightLineButton.setOnAction(e-> setOnRasterLineDrawing(LineType.SINGLE_LINE));
-        drawPolyLineButton.setOnAction(e-> setOnRasterLineDrawing(LineType.POLY_LINE));
-        freeHandLineButton.setOnAction(e-> setOnRasterLineDrawing(LineType.FREEHAND));
-        vectorPolyLineButton.setOnAction(e-> setOnVectorDrawing(ShapeType.POLY_LINE));
-
-
-        SettingsValues.bucketFillColorProperty().set(colorPicker.getValue());
-        colorPicker.addEventHandler(EventType.ROOT,e-> SettingsValues.bucketFillColorProperty().set(colorPicker.getValue()));
-    }
-
-    private void setOnRasterLineDrawing(LineType lineType) {
-
-        resetChoice();
-        if(Model.getInstance().getRightPanelController().getSelectedLayer().getLayerType().equals(LayerType.GRAPHIC)) {
-            RasterLineFactory shapeFactory = new RasterLineFactory(lineType);
-            shapeFactory.enableLineDrawing();
-        }else {
-            Model.getInstance().getRightPanelController().createEmptyLayer(false);
-        }
-    }
-    private void setOnVectorDrawing(ShapeType shapeType) {
-
-        resetChoice();
-        VectorShapeFactory factory =null;
-        switch (shapeType){
-            case POLY_LINE -> factory=new VectorPolyLineFactory();
-            case RECTANGLE -> factory=new VectorRectangleFactory();
-            case CURVE -> factory=new VectorCurveFactory();
-            case OVAL -> factory=new VectorOvalFactory();
-            case POLYGON -> factory=new VectorPolygonFactory();
-
-        }
-        factory.enableDrawing();
-
-
     }
 
 
@@ -94,9 +51,6 @@ public class LeftPanelController implements Initializable {
                 false));
     }
 
-    public Color currentColor(){
-        return colorPicker.getValue();
-    }
 
     public void disableButtons(boolean setDisabled){
         drawStraightLineButton.setDisable(setDisabled);

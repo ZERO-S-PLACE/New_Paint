@@ -6,15 +6,8 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Path;
-import javafx.scene.shape.QuadCurve;
-import javafx.scene.shape.QuadCurveTo;
-import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
-import org.zeros.new_paint.Models.Layers.RasterLayer;
 import org.zeros.new_paint.Models.Model;
-import org.zeros.new_paint.Models.Parameters;
 
 import java.io.IOException;
 
@@ -26,7 +19,7 @@ public class ViewFactory {
     private AnchorPane bottomPanel;
     private AnchorPane rightPanel;
     private AnchorPane imageEditionPanel;
-    private RasterLayer background;
+
     private AnchorPane trackingPane;
 
 
@@ -53,21 +46,6 @@ public class ViewFactory {
         return leftPanel;
     }
 
-    public AnchorPane getViewOfRightPanel() {
-
-        if (rightPanel == null) {
-            try {
-                FXMLLoader loader=new FXMLLoader(getClass().getResource("/FXML/RightPanel.fxml"));
-                loader.setController(Model.getInstance().getRightPanelController());
-                rightPanel =loader.load();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
-        }
-
-        return rightPanel;
-    }
 
     public AnchorPane getViewOfImageEditionPanel() {
 
@@ -116,17 +94,6 @@ public class ViewFactory {
         return bottomPanel;
     }
 
-    public RasterLayer getDrawingBackground(boolean recreate){
-        if(recreate||background==null) {
-            background = new RasterLayer(Parameters.getDEFAULT_WIDTH(), Parameters.getDEFAULT_HEIGHT(),
-                    Parameters.getDEFAULT_X_OFFSET(), Parameters.getDEFAULT_Y_OFFSET(), "Background");
-            background.canvasProperty().get().getGraphicsContext2D().setFill(Color.WHITE);
-            background.canvasProperty().get().getGraphicsContext2D().fillRect(0, 0,
-                    background.canvasProperty().get().getWidth(), background.canvasProperty().get().getHeight());
-        }
-        return background;
-    }
-
     public AnchorPane getTrackingPane() {
         if(this.trackingPane==null){
             this.trackingPane = new AnchorPane();
@@ -135,7 +102,7 @@ public class ViewFactory {
     }
     public void updateTrackingPaneOverlay(){
         trackingPane.getChildren().removeAll(trackingPane.getChildren());
-        Rectangle rectangle1=new Rectangle(trackingPane.getBoundsInLocal().getWidth(), background.offsetCoordinatesProperty().get().getY());
+       /* Rectangle rectangle1=new Rectangle(trackingPane.getBoundsInLocal().getWidth(), background.offsetCoordinatesProperty().get().getY());
         Rectangle rectangle2=new Rectangle(trackingPane.getBoundsInLocal().getWidth(),
                 trackingPane.getBoundsInLocal().getHeight()- background.offsetCoordinatesProperty().get().getY()- background.heightProperty().get());
         Rectangle rectangle3=new Rectangle(background.offsetCoordinatesProperty().get().getX(),trackingPane.getBoundsInLocal().getHeight());
@@ -150,7 +117,7 @@ public class ViewFactory {
         AnchorPane.setBottomAnchor(rectangle2,0.0);
         AnchorPane.setLeftAnchor(rectangle3,0.0);
         AnchorPane.setRightAnchor(rectangle4,0.0);
-        trackingPane.getChildren().addAll(rectangle1,rectangle2,rectangle3,rectangle4);
+        trackingPane.getChildren().addAll(rectangle1,rectangle2,rectangle3,rectangle4);*/
 
 
     }
