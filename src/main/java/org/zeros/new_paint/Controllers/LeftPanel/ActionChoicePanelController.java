@@ -1,9 +1,8 @@
-package org.zeros.new_paint.Controllers;
+package org.zeros.new_paint.Controllers.LeftPanel;
 
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.ColorPicker;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -13,17 +12,21 @@ import org.zeros.new_paint.Models.Model;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ActionChoicePanelController implements Initializable {
+public class ActionChoicePanelController extends LeftPanelController {
 
     public Button movingObjectButton;
     public Button obstacleButton;
     public Button targetAreaButton;
     public Button movingObjectToAddButton;
     public Button obstacleToAddButton;
-    public Button moveElementButton11;
-    public FontAwesomeIconView moveButton;
-    public Button rotateButton;
     public Button inputAreaButton;
+    public Button moveElementButton;
+    public Button moveButton;
+    public Button rotateButton;
+    public Button deleteButton;
+    public Button acceptButton;
+    public Button dismissButton;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

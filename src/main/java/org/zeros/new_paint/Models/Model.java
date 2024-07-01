@@ -1,6 +1,7 @@
 package org.zeros.new_paint.Models;
 
 import org.zeros.new_paint.Controllers.*;
+import org.zeros.new_paint.Controllers.LeftPanel.ActionChoicePanelController;
 import org.zeros.new_paint.Views.ViewFactory;
 
 public class Model {

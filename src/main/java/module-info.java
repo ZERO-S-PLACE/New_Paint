@@ -16,5 +16,6 @@ module org.zeros.new_paint {
     exports org.zeros.new_paint.Controllers;
     exports org.zeros.new_paint.Views;
     exports org.zeros.new_paint.Models;
+    exports org.zeros.new_paint.Controllers.LeftPanel;
 
 }

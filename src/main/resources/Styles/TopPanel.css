@@ -20,7 +20,7 @@
 }
 
 
-.top-panel-menu MenuItem{
+.top-panel-menu  MenuButton MenuItem{
 -fx-background-color:#274a55;
 }
 
@@ -54,7 +54,7 @@
 -fx-background-color:#778792;
 }
 .top-panel-menu .arrow{
--fx-background-color:#101f23;
+-fx-background-color:transparent;
 }
 
 

@@ -16,8 +16,7 @@ public class ViewFactory {
     private BorderPane mainWindow;
     private AnchorPane leftPanel;
     private AnchorPane topPanel;
-    private AnchorPane bottomPanel;
-    private AnchorPane rightPanel;
+    private BorderPane bottomPanel;
     private AnchorPane imageEditionPanel;
 
     private AnchorPane trackingPane;
@@ -34,7 +33,7 @@ public class ViewFactory {
     public AnchorPane getViewOfLeftPanel() {
         if (leftPanel == null) {
             try {
-                FXMLLoader loader=new FXMLLoader(getClass().getResource("/FXML/ActionChoicePanel.fxml"));
+                FXMLLoader loader=new FXMLLoader(getClass().getResource("/FXML/LeftPanels/ActionChoicePanel.fxml"));
                 loader.setController(Model.getInstance().getLeftPanelController());
                 leftPanel =loader.load();
             } catch (Exception e) {
@@ -78,7 +77,7 @@ public class ViewFactory {
 
         return topPanel;
     }
-    public AnchorPane getViewOfBottomPanel() {
+    public BorderPane getViewOfBottomPanel() {
 
         if (bottomPanel == null) {
             try {
