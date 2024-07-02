@@ -11,11 +11,12 @@ module org.zeros.new_paint {
     requires eu.hansolo.tilesfx;
     requires de.jensd.fx.glyphs.fontawesome;
 
-    opens org.zeros.new_paint to javafx.fxml;
-    exports org.zeros.new_paint;
-    exports org.zeros.new_paint.Controllers;
-    exports org.zeros.new_paint.Views;
-    exports org.zeros.new_paint.Models;
-    exports org.zeros.new_paint.Controllers.LeftPanel;
+    opens org.zeros.new_paint.LevelCreator to javafx.fxml;
+    exports org.zeros.new_paint.LevelCreator.Controllers;
+    exports org.zeros.new_paint.LevelCreator.Views;
+    exports org.zeros.new_paint.LevelCreator.Models;
+    exports org.zeros.new_paint.LevelCreator.Controllers.LeftPanel;
+    exports org.zeros.new_paint.LevelCreator;
+
 
 }
